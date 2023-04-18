@@ -10,7 +10,7 @@ import { HomeComponent } from './components/home';
 import { MatButtonModule } from "@angular/material/button";
 import { RegistroComponent } from './components/registro/registro.component';
 import { MatInputModule } from "@angular/material/input";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {MatDialogModule} from '@angular/material/dialog';
 import {  MatCardModule } from "@angular/material/card";
 import { inicioSesionDialog } from './components/menu/inicioSesion.component';
@@ -22,6 +22,16 @@ import { ReestContraComponent } from './components/sesion/ReestContra.component'
 import { InicioProfComponent } from './components/Profesor/InicioProf.component';
 import { navBar1Component } from './components/Profesor/navBar1.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { CalificacionComponent } from './components/alumno/calificacion.component';
+import { CrearClaseComponent } from './components/Profesor/Clase/ClasesProfesor/CrearClase.component';
+import { RouterModule } from '@angular/router';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldModule } from '@angular/material/form-field';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatListModule } from '@angular/material/list';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSelectModule} from '@angular/material/select';
+
 
 @NgModule({
   declarations: [
@@ -34,6 +44,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     ReestContraComponent,
     InicioProfComponent,
     navBar1Component,
+    CalificacionComponent,
+    CrearClaseComponent,
       ],
   imports: [
     BrowserModule,
@@ -50,9 +62,16 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     ToastrModule.forRoot({
       timeOut: 1000,
       positionClass: 'toast-bottom-right'
-    })
+    }),
+    RouterModule,
+    MatFormFieldModule,
+  MatProgressBarModule,
+  MatSelectModule,
+  MatListModule,
+  HttpClientModule,
+  ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

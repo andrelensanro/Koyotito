@@ -2,6 +2,7 @@ import { Component, Inject } from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import { AuthService } from '../services/authService.component';
 import { UserDTO } from '../modelo/userDTO.model';
+import { RegistroComponent } from '../registro/registro.component';
 /*
 export interface DialogData {
     contra: string;
@@ -25,6 +26,10 @@ export interface DialogData {
 
   
   export class inicioSesionDialog {
+
+    constructor(public dialog: MatDialog){
+      
+    }
   /*  public contra: string = "";
     public correo: string = "";
     
@@ -45,4 +50,9 @@ export interface DialogData {
   user(){
     return this.authService.userData?.correo;
   }*/
+  RegistroDialog(): void{
+    const dialogRef = this.dialog.open(RegistroComponent, {
+      //  data: {name: this.name},
+    });
+  }
 }

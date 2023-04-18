@@ -7,6 +7,7 @@
 
         <a mat-raised-button color="accent" routerLink="/InicioProfesor">Profesor</a>
         <a mat-raised-button color="accent" routerLink="/InicioTutor">Tutor</a>
+        <a mat-raised-button color="accent" routerLink="/TomarClase">Alumno</a>
 
 
         <span class="menu-spacer"></span>        
@@ -31,12 +32,23 @@
 
 <!----------------------------------------------------------------------------------------->
 
-<mat-toolbar color="primary" style="position: relative;" *ngIf="menuType==='Profesor'" class="navbar">
+<mat-toolbar color="primary" style="overflow: hidden;" *ngIf="menuType==='Profesor'" class="navbar">
     <mat-toolbar-row>
         <span>
             <a routerLink="/home"><mat-icon>more_vert</mat-icon></a>
         </span>
         <span class="menu-spacer"></span>        
     </mat-toolbar-row>
+</mat-toolbar>
 
+
+    <!--------------------------------------Crear Clase--------------------------------------------------->
+
+<mat-toolbar color="primary" *ngIf="menuType==='CrearClase'" class="navbar">
+    <mat-toolbar-row>
+        <span>
+            <a routerLink="/home"><mat-icon>more_vert</mat-icon></a>
+        </span>
+        <span class="menu-spacer"></span>        
+    </mat-toolbar-row>
 </mat-toolbar>

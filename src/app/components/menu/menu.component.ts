@@ -31,11 +31,13 @@ export class MenuComponent implements OnInit{
 
 ngOnInit(): void{
   this.route.events.subscribe((val:any)=>{
-    if(val.url.includes('home')){
-      this.menuType="General";
-    }else if(val.url.includes('Profesor')){
+    if(val.url.includes('Profesor')){
       this.menuType="Profesor";
-    }else{
+    }else if(val.url.includes('CrearClase')){
+      this.menuType="CrearClase";
+    }else if(val.url.includes('home')){
+      this.menuType="General";
+    }else {
       this.menuType="General_Otro";
     }
   })

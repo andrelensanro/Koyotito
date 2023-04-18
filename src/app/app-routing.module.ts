@@ -6,6 +6,9 @@ import { HomeComponent } from './components/home';
 import { RecuperarContraComponent } from './components/sesion/RecuperarContra.component';
 import { ReestContraComponent } from './components/sesion/ReestContra.component';
 import { InicioProfComponent } from './components/Profesor/InicioProf.component';
+import { CalificacionComponent } from './components/alumno/calificacion.component';
+import { CrearClaseComponent } from './components/Profesor/Clase/ClasesProfesor/CrearClase.component';
+import { InicioAlumnoComponent } from './components/alumno/InicioAlumno.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -13,7 +16,10 @@ const routes: Routes = [
   {path: 'recpContra', component: RecuperarContraComponent},
   {path: 'reestablecimiento', component: ReestContraComponent},
   {path: 'InicioProfesor', component: InicioProfComponent},
-  {path: '**', redirectTo: 'home'}
+    {path: 'CrearClase', component: CrearClaseComponent},
+    {path: 'Calificacion', component: CalificacionComponent},
+    {path: 'TomarClase', component: InicioAlumnoComponent},
+    {path: '', component: HomeComponent}
 ];
 
 @NgModule({

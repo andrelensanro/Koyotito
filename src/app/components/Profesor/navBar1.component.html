@@ -1,4 +1,4 @@
-<mat-toolbar class="navbar" style="background-color: transparent; position: relative;">
+<!--<mat-toolbar class="navbar" style="background-color: transparent; position: relative;">
     <mat-toolbar-row>
         <mat-button-toggle-group name="favoriteColor" aria-label="Favorite Color">
             <mat-button-toggle value="red">Título de la clase</mat-button-toggle>
@@ -12,4 +12,16 @@
               <input type="tel" matInput placeholder="Search">
               </mat-form-field>
     </mat-toolbar-row>
-</mat-toolbar>
+</mat-toolbar>-->
+
+
+<mat-toolbar class="navbar" style="background-color: transparent; ">
+    <mat-toolbar-row>
+          <mat-icon>search</mat-icon>
+          <mat-form-field c>
+              <input type="tel" matInput placeholder="Search">
+              </mat-form-field>
+              <button mat-flat-button color="primary" routerLink="/CrearClase">Crear clase</button>
+              <button mat-flat-button color="accent">Crear grupo</button>
+              <mat-icon>notifications</mat-icon>
+    </mat-toolbar-row>
